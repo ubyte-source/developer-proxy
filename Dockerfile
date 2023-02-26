@@ -5,7 +5,7 @@ ENV STARTUP_COMMAND_RUN_NGINX="nginx"
 ARG TIMEZONE="UTC"
 
 RUN apk update && \
-    apk add --no-cache nginx && \
+    apk add --no-cache nginx nginx-mod-stream && \
     apk add --no-cache tzdata && \
     rm -rf /var/cache/apk/*
 
